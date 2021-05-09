@@ -7,6 +7,7 @@ window.onload = () => {
     let lmao;
 
 
+
     function shuffleArray(array) {
         for (let i = 0; i < cards2.length; i++) {
 
@@ -31,8 +32,6 @@ window.onload = () => {
         lmao.id = lmao.id + i
         board.appendChild(lmao)
         lmao.addEventListener("click", flipCard)
-
-
     }
     a.appendChild(board)
     document.body.appendChild(a)
@@ -48,6 +47,7 @@ window.onload = () => {
         flipped[count] = parsed
         saver[count] = e.target.id
 
+
         for (let i = 0; i < arrFinal.length; i++) {
 
             if (count === 0){
@@ -62,10 +62,9 @@ window.onload = () => {
         if (count === 1 && flipped[0] === flipped[1]){
             document.getElementById(saver[0]).className = "done"
             document.getElementById(saver[1]).className = "done"
-            for (let i = 0; i <= saver.length; i++) {
-                document.getElementsByClassName("done").disabled = true
-            }
+
         }
+
 
         count++
     }
@@ -76,6 +75,9 @@ window.onload = () => {
             let maker = document.getElementById(a)
             maker.innerText = ""
             document.getElementById(a).disabled = false
+            document.getElementById(a).className = i + ""
+
+
 
             count = 0
         }
@@ -86,4 +88,6 @@ window.onload = () => {
 
 
 }
+
+
 
