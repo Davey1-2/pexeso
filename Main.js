@@ -62,7 +62,9 @@ window.onload = () => {
         if (count === 1 && flipped[0] === flipped[1]){
             document.getElementById(saver[0]).className = "done"
             document.getElementById(saver[1]).className = "done"
-
+            for (let i = 0; i <= saver.length; i++) {
+                document.getElementsByClassName("done").disabled = true
+            }
         }
 
 
@@ -75,7 +77,6 @@ window.onload = () => {
             let maker = document.getElementById(a)
             maker.innerText = ""
             document.getElementById(a).disabled = false
-            document.getElementById(a).className = i + ""
 
 
 
